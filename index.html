@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta type="author" content="Bao Nguyen">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h2>Temperature Converter</h2>
+		<form action="" id="nyform">
+		<section>
+			<div>
+				<label>Enter temperature to convert: </label>
+				<input type="text" id="fromTemp">
+				<label>is equal:</label>
+				<input type="text" id="toTemp">
+			</div>
+			<div class="tempType">
+				<label for ="Fahrenheit">Convert to:</label>
+				<input type="radio" name="tempType" id="Fahrenheit" checked="checked"> 
+				<label for="Fahrenheit">Fahrenheit</label>
+				<input type="radio" name="tempType" id="Celsius">
+				<label for="Fahrenheit">Celsius</label>
+			</div>
+			<div class="buttons">
+				<input type="button" value="Convert" onclick="convertTemp()"/> 
+				<!-- <button id="convertBtn">Convert</button> -->
+				<input type="button" value="Reset" onclick="resetAll()"/>
+			</div>
+		</section>
+		</form>
+	    <script src="converter.js"></script>
+</body>
+</html>
