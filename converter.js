@@ -1,8 +1,7 @@
 
-// document.getElementById("convertBtn").addEventListener("click", cons());
-
-function convertTemp ()
+function convertTemp (e)
 {	
+	e.preventDefault();
 	var fromNumber = document.getElementById("fromTemp").value;
 	var toTemp = document.getElementById("toTemp");
 	var convNumber;
@@ -65,3 +64,12 @@ function resetAll()
 	document.getElementById("toTemp").style.backgroundColor = "white";
 
 }
+
+// Assign a function to be executed when the button is clicked
+document.getElementById("convertBtn").addEventListener("click", convertTemp);
+document.getElementById("resetAll").addEventListener("click", resetAll);
+convertForm.addEventListener("keypress", function (e) {
+	if (e.keyCode === 13) {
+		convertTemp();
+	}
+});
