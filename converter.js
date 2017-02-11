@@ -10,27 +10,42 @@ function convertTemp (e)
 	{
 		convNumber    =  toFahrenheit(fromNumber).toFixed(0);
 		toTemp.value  = convNumber + " F";
-		if (convNumber > 90)
+		if (convNumber > 90) 
 		{
 			toTemp.style.backgroundColor = "red"; 
 		}
 		else
 		{
-			toTemp.style.backgroundColor = "blue"; 
+			if (convNumber < 32)
+			{
+				toTemp.style.backgroundColor = "blue"; 
+			}
+			else
+			{
+				toTemp.style.backgroundColor = "green"; 
+			}
 		}
 	}
 	else
 	{
 		convNumber    =  toCelcius(fromNumber).toFixed(0);
 		toTemp.value  = convNumber + " C";
+
+		
 		if (convNumber > 32)
 		{
 			toTemp.style.backgroundColor = "red"; 
 		}
-		else
-		{
-			toTemp.style.backgroundColor = "blue"; 
-		}
+		else if  (convNumber < 0)
+		
+		    {
+				toTemp.style.backgroundColor = "blue"; 
+			}
+			else
+				{
+					toTemp.style.backgroundColor = "green"; 
+				}
+		
 	}
 }
 
