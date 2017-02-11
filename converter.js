@@ -14,9 +14,7 @@ function convertTemp (e)
 		{
 			toTemp.style.backgroundColor = "red"; 
 		}
-		else
-		{
-			if (convNumber < 32)
+		else if (convNumber < 32)
 			{
 				toTemp.style.backgroundColor = "blue"; 
 			}
@@ -25,7 +23,6 @@ function convertTemp (e)
 				toTemp.style.backgroundColor = "green"; 
 			}
 		}
-	}
 	else
 	{
 		convNumber    =  toCelcius(fromNumber).toFixed(0);
